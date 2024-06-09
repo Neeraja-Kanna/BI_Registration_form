@@ -1,0 +1,140 @@
+/* Variables */
+:root {
+    --primary-bg: #ffffff; /* Changed to white */
+    --secondary-bg: #ff5722; /* Changed to a vibrant orange */
+    --primary-font: 'Arial', sans-serif; /* Changed font */
+    --input-bg: #f1f1f1; /* Changed to light grey */
+    --input-shadow: rgba(0, 0, 0, 0.2); /* Darker shadow */
+    --text-color: #333333; /* Darker text color */
+    --placeholder-color: #888888; /* Grey placeholder */
+    --button-bg: #ff5722; /* Changed to vibrant orange */
+    --button-color: #ffffff; /* White button text */
+    --body-bg: #e0e0e0; /* Light grey background */
+    --box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Larger shadow */
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+}
+
+body {
+    user-select: none;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--body-bg);
+    height: 100vh;
+}
+
+/* Main Container */
+.screen-1 {
+    background: var(--primary-bg);
+    padding: 40px; /* Increased padding */
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px; /* Sharper corners */
+    box-shadow: var(--box-shadow);
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    max-width: 350px; /* Slightly narrower */
+}
+
+.logo {
+    font-size: 2.5rem; /* Larger font size */
+    font-weight: normal; /* Changed to normal weight */
+    color: var(--secondary-bg);
+    margin-bottom: 20px; /* Increased margin */
+}
+
+.input-group {
+    background: var(--input-bg);
+    box-shadow: var(--box-shadow);
+    padding: 20px; /* Increased padding */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Increased gap */
+    border-radius: 5px; /* Sharper corners */
+    color: var(--text-color);
+    width: 100%;
+}
+
+input {
+    outline: none;
+    border: 1px solid #cccccc; /* Added border */
+    padding: 15px; /* Increased padding */
+    font-size: 1.1rem; /* Increased font size */
+    border-radius: 5px; /* Sharper corners */
+}
+
+input::placeholder {
+    color: var(--placeholder-color);
+    font-size: 1rem; /* Increased placeholder font size */
+}
+
+button.login {
+    padding: 15px; /* Increased padding */
+    background: var(--button-bg);
+    color: var(--button-color);
+    border: none;
+    border-radius: 5px; /* Sharper corners */
+    font-weight: bold; /* Bold font */
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.2rem; /* Increased font size */
+    margin-top: 20px; /* Increased margin */
+}
+
+/* Success Message */
+#successMessage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--secondary-bg);
+    margin-top: 20px; /* Increased margin */
+    display: none; /* Hide success message initially */
+}
+
+.hidden {
+    display: none;
+}
+
+.form-hidden {
+    display: none; /* Hide form after successful registration */
+}
+
+.checkmark {
+    width: 60px; /* Increased size */
+    height: 60px; /* Increased size */
+    margin: 20px 0; /* Increased margin */
+}
+
+.checkmark__circle {
+    stroke: var(--secondary-bg);
+    stroke-width: 3; /* Increased stroke width */
+    stroke-dasharray: 180; /* Increased dash array */
+    stroke-dashoffset: 180; /* Increased dash offset */
+    stroke-miterlimit: 10;
+    fill: none;
+    animation: stroke 0.8s cubic-bezier(0.65, 0, 0.45, 1) forwards; /* Slower animation */
+}
+
+.checkmark__check {
+    transform-origin: 50% 50%;
+    stroke: var(--secondary-bg);
+    stroke-width: 3; /* Increased stroke width */
+    stroke-dasharray: 60; /* Increased dash array */
+    stroke-dashoffset: 60; /* Increased dash offset */
+    animation: stroke 0.5s cubic-bezier(0.65, 0, 0.45, 1) 0.5s forwards; /* Slower animation */
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
